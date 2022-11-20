@@ -29,5 +29,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/', WebController::class);
+Route::post('/teste', [WebController::class, 'teste']);
 Route::get('/profile', [WebController::class, 'profile']);
 require __DIR__.'/auth.php';
